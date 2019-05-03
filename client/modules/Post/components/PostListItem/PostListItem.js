@@ -41,8 +41,8 @@ PostListItem.propTypes = {
     voteCount: PropTypes.number.isRequired,
   }).isRequired,
   onDelete: PropTypes.func.isRequired,
-  thumbUp: PropTypes.number.isRequired,
-  thumbDown: PropTypes.number.isRequred,
+  thumbUp: PropTypes.func.isRequired,
+  thumbDown: PropTypes.func.isRequired
 };
 
 export default PostListItem;

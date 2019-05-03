@@ -20,11 +20,7 @@ export function addPost(post) {
 export function addPostRequest(post) {
   return (dispatch) => {
     return callApi('posts', 'post', {
-      post: {
-        name: post.name,
-        title: post.title,
-        content: post.content,
-      },
+      post
     }).then(res => dispatch(addPost(res.post)));
   };
 }
@@ -95,7 +91,7 @@ export function thumbUpPostRequest(cuid, post) {
   return (dispatch) => {
     return callApi(`posts/${cuid}`, 'put', {
       post: {
-        voteCount: post.voteCount + 1,
+        voteCount: post.voteCount + 1
       },
     }).then(() => dispatch(thumbUpPost(cuid, post)));
   };
@@ -113,7 +109,7 @@ export function thumbDownPostRequest(cuid, post) {
   return (dispatch) => {
     return callApi(`posts/${cuid}`, 'put', {
       post: {
-        voteCount: post.voteCount - 1,
+        voteCount: post.voteCount
       },
     }).then(() => dispatch(thumbDownPost(cuid, post)));
   };

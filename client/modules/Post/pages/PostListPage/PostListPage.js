@@ -51,6 +51,8 @@ class PostListPage extends Component {
   }
 }
 
+PostListPage
+
 // Actions required to provide data for this component to render in sever side.
 PostListPage.need = [() => { return fetchPosts(); }];
 
